@@ -24,6 +24,11 @@ import SampleCreate from "./uiComponentsSample/SampleCreate";
 import SampleSearch from "./uiComponentsSample/SampleSearch";
 import SampleInbox from "./uiComponentsSample/SampleInbox";
 import SampleView from "./uiComponentsSample/SampleView";
+import SSCreate from "./NewPage";
+import CreateComplaintPage from "./CreateComplaintPage";
+import SchemaFormPage from "./SchemaFormPage";
+
+
 
 const SampleBreadCrumbs = ({ location }) => {
   const { t } = useTranslation();
@@ -59,6 +64,15 @@ const App = ({ path, stateCode, userType, tenants }) => {
 
         <PrivateRoute path={`${path}/response`} component={() => <Response></Response>} />
 
+
+
+        <PrivateRoute path={`${path}/sscreate`} component={() => <SSCreate/>} />
+        <PrivateRoute path={`${path}/complaintPage`} component={() => <CreateComplaintPage/>} />
+        <PrivateRoute path={`${path}/assignment11`} component={() => <SchemaFormPage/>} />
+
+
+        
+                    
         <PrivateRoute path={`${path}/sample-create`} component={() => <Create></Create>} />
         <PrivateRoute path={`${path}/sample-search`} component={() => <SearchWageSeeker></SearchWageSeeker>} />    
         <PrivateRoute path={`${path}/sample-view`} component={() =>  <ViewIndividual />} />
