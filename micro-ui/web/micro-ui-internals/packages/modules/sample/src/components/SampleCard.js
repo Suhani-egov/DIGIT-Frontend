@@ -66,6 +66,12 @@ const SampleCard = () => {
         label: t("Inbox"),
         link: `/${window?.contextPath}/employee/sample/inbox`,
       },
+
+      {
+        label: t("Complaint"),
+        link: `/${window?.contextPath}/employee/sample/assignment13`,
+      },
+
       {
         label: t("View"),
         link: `/${window?.contextPath}/employee/sample/view`,

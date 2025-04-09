@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "title": "Grievance Form",
+    "properties": {
+      "complaintType": {
+        "type": "string",
+        "title": "Complaint Type",
+        "enum": ["WATER_LEAKAGE", "ROAD_DAMAGE", "GARBAGE_ISSUE"]
+      },
+      "description": {
+        "type": "string",
+        "title": "Description",
+        "maxLength": 500
+      },
+      "location": {
+        "type": "object",
+        "title": "Location",
+        "properties": {
+          "lat": { "type": "number", "title": "Latitude" },
+          "lng": { "type": "number", "title": "Longitude" }
+        }
+      },
+      "attachments": {
+        "type": "array",
+        "title": "Attachments",
+        "items": {
+          "type": "object",
+          "properties": {
+            "fileStoreId": { "type": "string", "title": "File Store ID" },
+            "fileName": { "type": "string", "title": "File Name" }
+          }
+        }
+      }
+    },
+    "required": ["complaintType", "description"]
+  }
+  

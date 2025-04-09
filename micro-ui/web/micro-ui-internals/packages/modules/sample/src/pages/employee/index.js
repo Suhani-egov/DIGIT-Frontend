@@ -27,7 +27,7 @@ import SampleView from "./uiComponentsSample/SampleView";
 import SSCreate from "./NewPage";
 import CreateComplaintPage from "./CreateComplaintPage";
 import SchemaFormPage from "./SchemaFormPage";
-
+import AutoFormPage from "./AutoFormPage";
 
 
 const SampleBreadCrumbs = ({ location }) => {
@@ -66,9 +66,10 @@ const App = ({ path, stateCode, userType, tenants }) => {
 
 
 
-        <PrivateRoute path={`${path}/sscreate`} component={() => <SSCreate/>} />
-        <PrivateRoute path={`${path}/complaintPage`} component={() => <CreateComplaintPage/>} />
-        <PrivateRoute path={`${path}/assignment11`} component={() => <SchemaFormPage/>} />
+        {/* <PrivateRoute path={`${path}/sscreate`} component={() => <SSCreate/>} /> */}
+        {/* <PrivateRoute path={`${path}/complaintPage`} component={() => <CreateComplaintPage/>} /> */}
+        {/* <PrivateRoute path={`${path}/assignment11`} component={() => <SchemaFormPage/>} /> */}
+        <PrivateRoute path={`${path}/assignment13`} component={() => <AutoFormPage/>} />
 
 
         

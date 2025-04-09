@@ -170,3 +170,103 @@ export const transformHRMSCreateData = (data)=>{
     }
 
 }
+
+export const TransformApplyConfigCreateData = (data) => {
+    return {
+      Mdms: {
+        tenantId: "dev",
+        schemaCode: "Assignment.PGRAPPLY",
+        uniqueIdentifier: null,
+        data: {
+          config: {
+            isAddress: true,
+            isStepper: true,
+          },
+          complaintType: [
+            {
+              code: data.complaintType.code,
+              name: data.complaintType.name,
+            },
+          ],
+          complaintLocation: {
+            city: data.complaintLocation.city,
+            address: data.complaintLocation.address,
+            pincode: parseInt(data.complaintLocation.pincode),
+            landmark: data.complaintLocation.landmark,
+          },
+          citizenName: data.citizenName,
+          pictureUpload: {
+            type: "documentUpload",
+          },
+          citizenMobileNumber: parseInt(data.citizenMobileNumber),
+        },
+        isActive: true,
+      },
+      RequestInfo: {
+        apiId: "Rainmaker",
+        authToken: "b45d4ac9-7454-4e62-a508-540ddf880b77",
+        userInfo: {
+          id: 10543,
+          uuid: "8a32a4ea-dc0b-465d-b45a-95577475b45d",
+          userName: "MICROPLAN_ADMIN_DEV",
+          name: "User Dev",
+          mobileNumber: 7222611899,
+          emailId: null,
+          locale: null,
+          type: "EMPLOYEE",
+          roles: [
+            {
+              name: "Microplan Campaign integrator",
+              code: "MICROPLAN_CAMPAIGN_INTEGRATOR",
+              tenantId: "dev",
+            },
+            {
+              name: "System Administrator",
+              code: "SYSTEM_ADMINISTRATOR",
+              tenantId: "dev",
+            },
+            {
+              name: "Campaign Managers",
+              code: "CAMPAIGN_MANAGER",
+              tenantId: "dev",
+            },
+            {
+              name: "Boundary Manager",
+              code: "BOUNDARY_MANAGER",
+              tenantId: "dev",
+            },
+            {
+              name: "Localisation admin",
+              code: "LOC_ADMIN",
+              tenantId: "dev",
+            },
+            {
+              name: "Campaign Admin",
+              code: "CAMPAIGN_ADMIN",
+              tenantId: "dev",
+            },
+            {
+              name: "Microplan Admin",
+              code: "MICROPLAN_ADMIN",
+              tenantId: "dev",
+            },
+            {
+              name: "MDMS ADMIN",
+              code: "MDMS_ADMIN",
+              tenantId: "dev",
+            },
+            {
+              name: "HRMS Admin",
+              code: "HRMS_ADMIN",
+              tenantId: "dev",
+            },
+          ],
+          active: true,
+          tenantId: "dev",
+          permanentCity: null,
+        },
+        msgId: "1743746958756|en_IN",
+        plainAccessRequest: {},
+      },
+    };
+  };
