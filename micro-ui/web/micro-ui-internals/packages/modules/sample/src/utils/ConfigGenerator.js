@@ -213,7 +213,6 @@
     
 //     return field;
 //   }
-  
 
 export const schemaToConfig = (schema) => {
     if (!schema || typeof schema !== 'object') {
@@ -224,6 +223,16 @@ export const schemaToConfig = (schema) => {
     const required = schema.required || [];
   
     const sections = groupPropertiesIntoSections(properties, required);
+
+    // if (sections.length > 0) {
+    //     sections[0].body.unshift({
+    //       type: "header",
+    //       label: "Register Complaint",
+    //       key: "formHeading"
+    //     });
+    //   }
+
+
     return sections;
   };
   
